@@ -1,0 +1,5 @@
+print ("Hello wolrd")
+UserName=input ('Ínput your Name:')
+print ('Your Name - ', UserName)
+print('Nothing')
+print('')
