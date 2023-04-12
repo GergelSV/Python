@@ -1,7 +1,12 @@
-number1=int(input ('input first number : '))
-number2=int(input ('input second number : '))
-number3=int(input ('input third number : '))
-number4=int(input ('input fourth number : '))
-number=number4*number3*number2*number1
+number=int(input ('input  number : '))
+a1=number//1000
+a2=number//100%10
+a3=number//10%10
+a4=number%10
+mult=a1*a2*a3*a4
 print('********   program execution result    ********* ')
-print('number = ',number)
+print('number1 = ',a1)
+print('number2 = ',a2)
+print('number3= ',a3)
+print('number4 = ',a4)
+print('mult = ',mult)
