@@ -1,11 +1,22 @@
 n=int(input ('enter the digit: '))
 buf=n
 count=0
+rez=0
 #  узнаем скольки значное число результат в count
 while  buf:
-    buf//=10
     count+=1
-print(count)
+    buf//=10
+#print (count)
+buf=n
+while count:
+    number=buf%10
+    print (number)
+    buf//=10
+    if not (number ==3 or number ==6):
+        rez=rez+(number*10**count)
+        print('rez',rez)
+    count-=1
+print(rez)
 
 #number_of_signs=count
 #for i in range(1,number_of_signs+1):
