@@ -1,0 +1,5 @@
+stroka=input('Input str: ')
+word_find=input('Input  find word: ')
+word_repl=input('Input  replace word: ')
+stroka_new=stroka.replace(word_find,word_repl)
+print(stroka_new)

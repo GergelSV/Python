@@ -1,0 +1,5 @@
+stroka=input('Input text: ')
+word_find=input('Input word: ')
+word_new=word_find.upper()
+str_new=stroka.replace(word_find,word_new)
+print('Modified text = ',str_new)
