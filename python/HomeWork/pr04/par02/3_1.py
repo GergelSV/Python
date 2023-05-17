@@ -18,6 +18,7 @@ while True:
         new_list2.append(inpNumber)
     else:
         break
+
 print('You inputed  2 list')
 print (new_list1,new_list2)
 
@@ -39,7 +40,6 @@ print ('list containing elements of both lists without repetition',list3_2)
 
 # третий список, содержащий элементы общие для двух списков          
 list3_3=[]
-list_temp=list(ls1)
 for item in ls1:
     if item in ls2:
         list3_3.append(item)
@@ -49,7 +49,6 @@ print(list3_3)
 
 
 # мин и макс значения каждого из списков
-list3_5=[]
 list3_5=[min(new_list1),max(new_list1),min(new_list2),max(new_list2)]
 
 print('The third list containing only the minimum and maximum value of each lists')
