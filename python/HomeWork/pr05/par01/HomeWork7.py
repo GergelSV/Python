@@ -17,8 +17,6 @@ def palindrome (a):
             return False
     
  
-
-
 Numb=input('Input integer number= ')
 
 print('The number palindrom = ',palindrome (Numb))
