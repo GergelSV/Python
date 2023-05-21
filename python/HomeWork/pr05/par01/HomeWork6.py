@@ -5,4 +5,5 @@ def numberOfDigits(a):
 
 Numb=input('Input integer number= ')
 
-print('Multiplication number from range = ',numberOfDigits(Numb))
+
+print('Quantity digits in number = ',numberOfDigits(Numb))
