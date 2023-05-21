@@ -1,4 +1,4 @@
-def Min_my(a):
+def Min_list(a):
     if type(a)==list:
         return min(a)
 
@@ -12,4 +12,4 @@ for i in range(numb):
 
 print('List:  ',mas)
 
-print('Min = ',Min_my(mas))
+print('Min = ',Min_list(mas))
