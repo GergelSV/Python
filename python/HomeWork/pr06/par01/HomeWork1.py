@@ -44,7 +44,9 @@ class Car:
              self.price=p
         
         def __str__(self) :
-            return "This is a car " +self.name+"  "+str(self.year)+" year release with "+" manufacturer "+self.manufacturer+" engine size "+str(self.capacity)+" and color "+str(self.color)+" price = "+str(self.price)+"  $"
+            return "This is a car " +self.name+"  "+str(self.year)+" year release with "+\
+                  " manufacturer "+self.manufacturer+" engine size "+str(self.capacity)+\
+                        " and color "+str(self.color)+" price = "+str(self.price)+"  $"
         
                   
 Avto=Car('Corola',2012,'Toyota',1.33,'Grey metalik',100000)
