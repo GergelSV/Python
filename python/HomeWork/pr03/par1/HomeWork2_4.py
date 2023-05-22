@@ -1,7 +1,7 @@
-min_number=0
-max_number=0
-sum=0
 number=float(input('Input number or write 7 to stop the program: '))
+sum=0
+min_number=number
+max_number=number
 while True:
     if number ==7:
         break
