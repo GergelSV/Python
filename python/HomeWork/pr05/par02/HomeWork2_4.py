@@ -4,11 +4,13 @@ def countDeleteNumber(lst,delN):
     for i in lst:
         if i !=delN:
             li.append(i)
-    return len(lst)-len(li)
+    countDel=len(lst)-len(li)
+    lst=li[:]
+    return countDel
 
 mas = []
 
-number=int(input('Input the number of numbers in the list = '))
+number=int(input('Input the count of numbers in the list = '))
 for i in range(number):
     mas.append(int(input('number['+str(i)+'] = ')))
 delNumber=int(input('Input the number to be removed = '))
