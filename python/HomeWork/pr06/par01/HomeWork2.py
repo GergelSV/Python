@@ -44,7 +44,9 @@ class book:
              self.price=p
         
         def __str__(self) :
-            return "This is a book " +self.name+"  "+str(self.year_release)+" year release with "+" pablisher "+self.pablisher+" genre "+self.genre+" and author "+self.author+" price = "+str(self.price)+" $"
+            return "This is a book " +self.name+"  "+str(self.year_release)+\
+                  " year release with "+" pablisher "+self.pablisher+" genre "\
+                  +self.genre+" and author "+self.author+" price = "+str(self.price)+" $"
         
                   
 book1=book('Angels and Demons',2000,'Pocket Book','detective','Den Braun',10)
