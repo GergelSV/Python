@@ -12,10 +12,19 @@ class Animal:
         print(self.__id,self.hand, self.paw, self.cover, self.tail,self.family, end=' ')
 
 class Tiger(Animal):
+<<<<<<< HEAD
          
     def __init__(self, hand, paw, cover, tail, family,roars) -> None:
         super().__init__(hand, paw, cover, tail, family)
         self.roars=roars
+=======
+    # def __init__(self) -> None:
+    #     super().__init__()
+      
+    def __init__(self, hand, paw, cover, tail, family,characteristic) -> None:
+        super().__init__(hand, paw, cover, tail, family)
+        self.characteristic=characteristic
+>>>>>>> 08d13e65073e88bf6364ba5abde9d3c31a73a326
 
     def put_paw(self,y):
         self.paw=y
@@ -23,6 +32,7 @@ class Tiger(Animal):
 
     def show_info(self):
         super().show_info()
+<<<<<<< HEAD
         print (self.roars)
         
 
@@ -51,6 +61,34 @@ animal1.show_info()
 animal2=Tiger('Плямиста голова з вушками-китицями','міцні лапи','коротка  плямиста вовна','гнучкий хвіст','сімейство котячих','гучно ричить')
 animal2.show_info()
 animal2.put_paw('пруткі лапи')
+=======
+        print (self.jungle_dweller)
+        
+
+class Crocodile(Animal):
+    def __init__(self) -> None:
+        super().__init__()
+            
+    def show_info(self):
+        super().show_info()
+        
+
+class Kangaroo(Animal):
+    def __init__(self,length) -> None:
+        super().__init__()
+        self.lengh =length
+    
+    def show_info(self):
+        super().show_info()
+        print(self.lengh)        
+
+#animal1=Animal('Плямиста голова з вушками-китицями','міцні лапи','коротка  плямиста вовна','гнучкий хвіст','сімейство котячих')
+#animal1.show_info()
+#animal2=Tiger()
+animal2=Tiger('Плямиста голова з вушками-китицями','міцні лапи','коротка  плямиста вовна','гнучкий хвіст','сімейство котячих','самое быстрое животное')
+animal2.show_info()
+animal2.put_paw('короткі лапи')
+>>>>>>> 08d13e65073e88bf6364ba5abde9d3c31a73a326
 animal2.show_info()
 
 
