@@ -1,22 +1,35 @@
 import random
 class Money:
-    def __init__(self,name,integer,fractional,exchange):
+    def __init__(self,name,integer_part,fractional_part,exchange):
         self.name = name
-        self.integer = integer
-        self.fractional = fractional
+        self.integer_part = integer_part
+        self.fractional_part = fractional_part
         self.exchange = exchange
         self.__id = random.randint(1,10)
     
     def show_info(self):
-        print("ID - ",self.__id," Name money is ",self.name," count = ",self.integer,'.',self.fractional,' dollar exchange rate = ',self.exchange,sep='',)
+        print("ID - ",self.__id," Name money is ",self.name," count = ",self.integer_part,'.',self.fractional_part,' dollar exchange rate = ',self.exchange,sep='',)
 
-    def put_exchange(self,new_exchange):
-        self.exchange = new_exchange
+    def put_integer_part(self,new_int_part):
+        self.integer_part = new_int_part
+
+    def put_fractional_part(self,new_fract_part):
+        self.fractional_part = new_fract_part
+    
 
     def displaySumOnScreen(self):
-        print('сумма = ',self.integer,'.',self.fractional,' ',self.name,sep='')
+        print('сумма = ',self.integer_part,'.',self.fractional_part,' ',self.name,sep='')
 
 oper1 = Money('грн',"25","05","36,5")
 oper1.displaySumOnScreen()
 oper1.show_info()
+
+oper1.put_integer_part(356)
+oper1.displaySumOnScreen()
+
+oper1.put_fractional_part(26)
+oper1.displaySumOnScreen()
+
+oper1.show_info()
+
 

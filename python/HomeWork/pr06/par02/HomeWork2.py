@@ -66,8 +66,3 @@ Ship3.show_info()
 Ship3.put_rocket("ATACMS")
 Ship3.show_info()     
 
-
-
-
-
-#print(CoffeeMachine.mro())

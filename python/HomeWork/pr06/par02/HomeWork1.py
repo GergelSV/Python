@@ -63,7 +63,6 @@ cofmashin.show_info()
 cofmashin.put_price("20 000 грн ")
 cofmashin.change_cappuccnatore("без капучінатора")
 cofmashin.show_info()
-
 #print(CoffeeMachine.mro())
 
 Dev_blend=Blender('Блендер',"Brawn 530","Philips","1 кг","1 999 грн "," 15 швідкостей ","венчік")
