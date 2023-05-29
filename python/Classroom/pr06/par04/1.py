@@ -5,7 +5,7 @@ class Wheel:
         self.tirePressure = tirePressure
 
     def showInfo(self):
-        print('Radius wheel =',self.r,'width =',width)
+        print('Radius wheel =',self.r,'width =',self.width)
 
     def pumpUp(self,number):
         if (self.tirePressure + number< 2.5):
@@ -62,6 +62,7 @@ class Avto(Engine,Wheel,Door):
         print('color avto is ',self.color,'marka = ',self.marka,' car have ',self.countDoor,'doors,',self.countWheel,'wheel')
 
 
+car = Avto('дизель',1.6,'інжектор',15,1,1,'c замком',)
 
 
 
