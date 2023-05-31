@@ -1,16 +1,16 @@
-class fraction:
+class Fraction:
     count = 0
 
     def __init__(self,number) -> None:
         self.number = number
-        fraction.count+=1
+        Fraction.count+=1
 
     @staticmethod
     def get_count():
-        return fraction.count
+        return Fraction.count
 
 
 
-num1 = fraction(5)
-num2 = fraction(4)
-print("Count inilializathin class fraction =",fraction.get_count())
+num1 = Fraction(5)
+num2 = Fraction(4)
+print("Count inilializathin class Fraction =",Fraction.get_count())

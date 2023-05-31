@@ -1,61 +1,85 @@
-
+import random
 class Circle:
     def __init__(self,r,circumference) -> None:
         self.r = r
         self.circumference = circumference
     
+    def show_info(self):
+        print('r =',self.r, 'длина  = ',self.circumference)
+         
+
     def __eq__(self, __value: object) -> bool:
         if type(__value) == Circle:
             if self.r == __value.r:
                 return True
             else:
                 return False
+    def __lt__(self,other):
+        if type(other) == Circle:
+            if self.circumference < other.circumference:
+                return True
+            else:
+                return False
+
+    def __gt__(self,other):
+        if type(other) == Circle:
+            if self.circumference > other.circumference:
+                return True
+            else:
+                return False    
+
+    def __le__(self,other):
+            if type(other) == Circle:
+                if self.circumference <= other.circumference:
+                    return True
+                else:
+                    return False    
+
+    def __ge__(self,other):
+            if type(other) == Circle:
+                if self.circumference >= other.circumference:
+                    return True
+                else:
+                    return False  
+                            
+    def __add__(self,other):
+            return self.r + other
+                
+    def __sub__(self,other):
+            return self.r-other
+                    
+    def __iadd__(self,other):
+            self.r += other 
+            return self.r
+                    
+    def __isub__(self,other):
+            self.r -= other
+            return self.r
             
-    
 
 
-a1 = Circle(5,25)
-a2 = Circle(5,20)
+a1 = Circle(105,25)
+a2 = Circle(10,20)
+a3 = Circle(23,45)
+a4 = Circle(1,2)
+number = random.randint(1,100)
 
-print(a1 == a2)
+print('expression a1 == a2 is',a1 == a2)
+print('expression a1 > a2 is',a1 > a2)
+print('expression a1 < a2 is',a1 < a2)
+print('expression a1 >= a2 is',a1 >= a2)
+print('expression a1 <= a2 is',a1 <= a2)
 
-    
+a1.r = a1.r - number
+print('after decreasing by ',number,' radius object  a1= ',a1.r)       
+a2.r = a2.r + number
+print('after increaseing by ', number,' radius object a2=',a2.r)        
 
+number = random.randint(1,100)
+a4.r += number
+print('expression a4 += ',number,' is ',a4.r)                           
 
-
-
-
-# class Money:
-#     def __init__(self,name,integer_part,fractional_part,exchange):
-#         self.name = name
-#         self.integer_part = integer_part
-#         self.fractional_part = fractional_part
-#         self.exchange = exchange
-#         self.__id = random.randint(1,10)
-    
-#     def show_info(self):
-#         print("ID - ",self.__id," Name money is ",self.name," count = ",self.integer_part,'.',self.fractional_part,' dollar exchange rate = ',self.exchange,sep='',)
-
-#     def put_integer_part(self,new_int_part):
-#         self.integer_part = new_int_part
-
-#     def put_fractional_part(self,new_fract_part):
-#         self.fractional_part = new_fract_part
-    
-
-#     def displaySumOnScreen(self):
-#         print('сумма = ',self.integer_part,'.',self.fractional_part,' ',self.name,sep='')
-
-# oper1 = Money('грн',"25","05","36,5")
-# oper1.displaySumOnScreen()
-# oper1.show_info()
-
-# oper1.put_integer_part(356)
-# oper1.displaySumOnScreen()
-
-# oper1.put_fractional_part(26)
-# oper1.displaySumOnScreen()
-
-# oper1.show_info()
-
+number = random.randint(1,10)
+a3.r -= number
+print('expression a3 -= ',number,' is ',a3.r)                           
 
