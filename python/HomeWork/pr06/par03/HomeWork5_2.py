@@ -3,15 +3,26 @@ class Complex:
         self.a = a
         self.b = b
 
-    def __add__(self,other):
-        aPlusC= self.a + other.a
-        bPlusD = self.b + other.b
-        return str(aPlusC) +str(bPlusD) +'*i'
+    def __str__(self) -> str:
+        if self.b < 0:
+            znak = '-'
+            self.b *=-1
+        else:
+             znak = '+'    
+        return str(self.a)+znak+str(self.b)+'*i'
+
+    def __add__(self,other):   
+        a= self.a + other.a
+        b = self.b + other.b
+        return Complex(a,b)
+        
+       
     
     def __sub__(self,other):
-        aSubC= self.a - other.a
-        bSubD = self.b - other.b
-        return str(aSubC) +str(bSubD) +'*i'
+        a = self.a - other.a
+        b = self.b - other.b
+        return Complex(a,b)
+        
 
     # произведениe комплексных чисел a+bi и c+di  (ac+bd)+(bc-ad)*i
 
@@ -20,10 +31,11 @@ class Complex:
         bd = self.b * other.b
         bc = self.b * other.a
         ad = self.a * other.b
-        skobka1 = ac - bd
-        skobka2 = bc + ad
+        a = ac - bd
+        b = bc + ad
 
-        return str(skobka1) +str(skobka2) +'*i'
+        return Complex(a,b)
+        
 
     def __truediv__(self,other):
         ac= self.a * other.a
@@ -31,18 +43,19 @@ class Complex:
         bc = self.b * other.a
         ad = self.a * other.b
         c2PlusD2 = other.a * other.a + other.b *other.b 
-        drob1 = (ac + bd)/c2PlusD2
-        drob2 = (bc - ad)/c2PlusD2
+        a = (ac + bd)/c2PlusD2
+        b = (bc - ad)/c2PlusD2
 
-        return str(drob1) +str(drob2) +'*i'
+        return Complex(a,b)
+        
 
 
-# z = a+bi комплексное число
+# z = a+b*i комплексное число
 
 z1 = Complex(5,-6)
 z2 = Complex(-3,2)
 
-print('z1+z2 =',z1 + z2)
+print('z1+z2 =',z1+z2)
 print('z1-z2 =',z1 - z2)
 
 z1 = Complex(2,3)

@@ -1,11 +1,11 @@
+import math
 import random
 class Circle:
-    def __init__(self,r,circumference) -> None:
+    def __init__(self,r) -> None:
         self.r = r
-        self.circumference = circumference
-    
+            
     def show_info(self):
-        print('r =',self.r, 'длина  = ',self.circumference)
+        print('r =',self.r)
          
 
     def __eq__(self, __value: object) -> bool:
@@ -16,70 +16,70 @@ class Circle:
                 return False
     def __lt__(self,other):
         if type(other) == Circle:
-            if self.circumference < other.circumference:
+            if 2*math.pi*self.r < 2*math.pi*other.r:
                 return True
             else:
                 return False
 
     def __gt__(self,other):
         if type(other) == Circle:
-            if self.circumference > other.circumference:
+            if 2*math.pi*self.r > 2*math.pi*other.r:
                 return True
             else:
                 return False    
 
     def __le__(self,other):
             if type(other) == Circle:
-                if self.circumference <= other.circumference:
+                if 2*math.pi*self.r <= 2*math.pi*other.r:
                     return True
                 else:
                     return False    
 
     def __ge__(self,other):
             if type(other) == Circle:
-                if self.circumference >= other.circumference:
+                if 2*math.pi*self.r >= 2*math.pi*other.r:
                     return True
                 else:
                     return False  
                             
     def __add__(self,other):
-            return self.r + other
+            return Circle(self.r + other)
                 
     def __sub__(self,other):
-            return self.r-other
+            return Circle(self.r-other)
                     
     def __iadd__(self,other):
             self.r += other 
-            return self.r
+            return Circle(self.r)
                     
     def __isub__(self,other):
             self.r -= other
-            return self.r
+            return Circle(self.r)
             
 
 
-a1 = Circle(105,25)
-a2 = Circle(10,20)
-a3 = Circle(23,45)
-a4 = Circle(1,2)
+a1 = Circle(105)
+a2 = Circle(10)
+a3 = Circle(23)
+a4 = Circle(1)
 number = random.randint(1,100)
 
-print('expression a1 == a2 is',a1 == a2)
-print('expression a1 > a2 is',a1 > a2)
-print('expression a1 < a2 is',a1 < a2)
-print('expression a1 >= a2 is',a1 >= a2)
-print('expression a1 <= a2 is',a1 <= a2)
+print('circle a1 = circle a2 is',a1 == a2)
+print('circle a1 > circle a2 is',a1 > a2)
+print('circle a1 < circle a2 is',a1 < a2)
+print('circle a1 >= circle a2 is',a1 >= a2)
+print('circle a1 <= circle a2 is',a1 <= a2)
 
-a1.r = a1.r - number
+a1 = a1 - number
 print('after decreasing by ',number,' radius object  a1= ',a1.r)       
-a2.r = a2.r + number
+a2 = a2 + number
 print('after increaseing by ', number,' radius object a2=',a2.r)        
 
 number = random.randint(1,100)
-a4.r += number
+a4 += number
 print('expression a4 += ',number,' is ',a4.r)                           
 
 number = random.randint(1,10)
-a3.r -= number
+a3 -= number
 print('expression a3 -= ',number,' is ',a3.r)                           
 
