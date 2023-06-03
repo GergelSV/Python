@@ -1,52 +1,90 @@
 import math
-class Figure:                           #  * arg
-    def __init__(self,a,b,) -> None:
-            self.a = a
-            self.b = b
+class Figure:                           
+    def __init__(self) -> None:
+        pass
 
     def square(self):
         pass
 
-    
+        
 class Rectangle(Figure):                
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
+    def __init__(self, a,b) -> None:
+        super().__init__()
+        self.a = a
+        self.b = b
 
     def square(self):
         return self.a * self.b
+    
+    def __int__ (self):
+        return self.square()
+    
+    def __str__(self) -> str:
+        print('figure Rectangle with sides',self.a,' and ',self.b,' has an square = ',self.__int__())
 
-class Circle(Figure):                   #a - радиус b - длина окружности
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
-
+class Circle(Figure):   
+    def __init__(self,a) -> None:
+        super().__init__()
+        self.a = a
+        
     def square(self):
         return math.pi*self.a*self.a
+    
+    def __int__ (self):
+        return self.square()
+    
+    def __str__(self) -> str:
+        print('figure Circle with radius',self.a,' has an square = ',self.__int__())
+
+    
 
 class RightTriangle(Figure):
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
+    def __init__(self, a, c) -> None:
+        super().__init__()
+        self.a = a
+        self.c = c
        
     def square(self):
-        return 0.5*super().square()
-
+        return 0.5*self.a*self.c
+    
+    def __int__ (self):
+        return self.square()
+    
+    def __str__(self) -> str:
+        print('figure RightTriangle with sides',self.a,',and ',self.c,' has an square = ',self.__int__())
+    
 class Trapezoid(Figure):
     def __init__(self, a, b,h) -> None:
-        super().__init__(a, b)
+        super().__init__()
+        self.a = a
+        self.b = b
         self.h = h
 
     def square(self):
         return (self.a+self.b)*self.h/2                     
     
+    def __int__ (self):
+        return self.square()
+    
+    def __str__(self) -> str:
+        print('figure Trapezoid with sides',self.a,' and ',self.b,' with higth',self.h,' has an square = ',self.__int__())
 
 
 figur1 = Trapezoid(2,5,3)
-print (figur1.square())
+figur1.__str__()
 
 figur2 = RightTriangle(5,7)
-print (figur2.square())
+figur2.__str__()
 
-figur3 = Circle(5,12)
-print (figur3.square())
+figur3 = Circle(5)
+figur3.__str__()
+
+figur4 = Rectangle(5,4)
+figur4.__str__()
+
+
+
+
 # class Circle:
 #     def __init__(self,r) -> None:
 #         self.r = r
