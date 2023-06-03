@@ -5,7 +5,7 @@ def isPrime(n):
     else:
         return True
 
-def numbersIsPrime(lst):
+def countIsPrime(lst):
    count=0
    for i in range(len(lst)):
       if(isPrime(lst[i])):
@@ -16,11 +16,11 @@ def numbersIsPrime(lst):
 import random
 mas = []
 
-numb=int(input('Input the number of numbers in the list = '))
+numb=int(input('Input the count of numbers in the list = '))
 
 for i in range(numb):
     mas.append(random.randint(1,25))
 
 print('List:  ',mas)
 
-print('Number of primes in the lists = ',numbersIsPrime(mas))
+print('Count of primes in the lists = ',countIsPrime(mas))
