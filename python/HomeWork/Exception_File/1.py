@@ -1,4 +1,4 @@
-fin = open('./students.txt','r') 
+fin = open('./2.txt','r') 
 f_students = fin.readlines()
 marks = []
 sp_student = []

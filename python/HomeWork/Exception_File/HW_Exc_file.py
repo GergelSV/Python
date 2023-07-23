@@ -1,3 +1,4 @@
+import sys
 def print_spisok (str_header,spisok):
     
     nomer_pp = 1
@@ -35,10 +36,9 @@ try:
          
 except Exception as ex:             
         print(ex)
-finally:
-        fin.close()
-
-
+        print ('Завершення роботи програми. \n До побачення')
+        sys.exit()
+        
         
  
 answer_number=1
